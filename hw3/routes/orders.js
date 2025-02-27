@@ -7,10 +7,13 @@ const orders = [
     { topping: 'Chocolate', quantity: 1, month: 'Feb' },
   ];
 
+// POST request to filter orders by month
 router.post('/', (req, res) => {
-    var { month } = req.body;
-    var filteredOrders = orders.filter(order => order.month === month);
-    res.json(filteredOrders); //send the mf JSON now filtered by month
+  const { month } = req.body;
+
+  const filteredOrders = orders.filter(order => order.month === month);
+  res.json(filteredOrders);
 });
+
 
 module.exports = router;
