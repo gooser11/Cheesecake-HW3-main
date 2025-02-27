@@ -1,6 +1,7 @@
 // java script stuff
 // Author: Rowena Archer
     $(document).ready(function(){
+        
 
         //script for order button
         $(":button").click(function(){
@@ -19,7 +20,7 @@
             }
         });
 
-        // script for dropdown menu
+        // script for  month dropdown menu
         $("#menu-options a").click(function(event) {
             event.preventDefault();
             var selection = $(this).text(); // Get the selected option text
